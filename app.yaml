@@ -1,0 +1,17 @@
+# Specify the Node.js version. For example: nodejs18, etc.
+runtime: nodejs18
+
+# Set any environment variables your app needs
+env_variables:
+  MODEL_URL: "https://storage.googleapis.com/mlgc-dicodings/model/model.json"
+  PROJECT_ID: submission-mlgc-nadhifah
+  FIRESTORE_COLLECTION: predictions
+
+# Set service account credentials
+service_account: mlgc-nadhifa@submission-mlgc-nadhifah.iam.gserviceaccount.com
+
+# Set the path to your app's main module
+handlers:
+  # Serve the app's main module
+  - url: /.*
+    script: auto
